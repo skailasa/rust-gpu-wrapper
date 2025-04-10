@@ -19,6 +19,10 @@ fn main() {
         .status()
         .unwrap();
 
+    // c - create a new archive
+    // r - insert files into archive, replace existing files
+    // u - update the archive, adds new files and updates existing
+    // s - create an index (symbol table),
     Command::new("ar")
         .args(&["crus"])
         .arg(out_dir.join("libkernels.a"))
